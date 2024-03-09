@@ -3,12 +3,12 @@ import Image from "next/image";
 function Header() {
   return (
     <>
-      <div className="flex flex-row justify-between px-[30px] py-[23px] bg-[#FFFFFF]">
-        <p className="font-semibold">Checkout</p>
+      <div className="flex flex-row justify-between bg-[#FFFFFF] items-center h-[68px] shadow">
+        <p className="font-semibold px-[30px] py-[23px]">Checkout</p>
 
-        <div className="flex flex-row gap-x-2">
+        <div className="flex flex-row gap-x-2 px-[54px] py-[25px]">
           <Image
-            src={"/icons/Checkout/helpSupport.svg"}
+            src={"/icons/Header/helpSupport.svg"}
             alt="help&support"
             width={12}
             height={12}
