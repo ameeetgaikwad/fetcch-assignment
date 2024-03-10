@@ -16,7 +16,9 @@ function LinkComponent({
           return (
             <div
               className={`flex items-center space-x-5 w-[400px] h-[68px] border-2 rounded-[20px] py-[14px] pl-5 ${
-                checked === link.title ? "border-[#3461FF]" : "border-[#EBEBEB]"
+                checked === link.title
+                  ? "border-[1px] border-[#7795FF]"
+                  : "border-[#EBEBEB]"
               }`}
             >
               <input

@@ -9,11 +9,14 @@ import Advanced from "../Addons/Advanced/Advanced";
 function AccordionComponent({ title }: { title: string }) {
   return (
     <>
-      <AccordionItem value={title} className="w-[400px]">
+      <AccordionItem
+        value={title}
+        className={`w-[400px] ${title === "Options" && "mb-5"}`}
+      >
         <AccordionTrigger className="text-2xl font-semibold">
           {title}
         </AccordionTrigger>
-        <AccordionContent className="">
+        <AccordionContent className="pb-0">
           {title === "Options" ? <Options /> : <Advanced />}
         </AccordionContent>
       </AccordionItem>

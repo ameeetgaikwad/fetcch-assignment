@@ -4,7 +4,7 @@ function Header() {
   return (
     <>
       <div className="flex flex-row justify-between bg-[#FFFFFF] items-center h-[68px] shadow">
-        <p className="font-semibold px-[30px] py-[23px]">Checkout</p>
+        <p className="text-xl font-semibold px-[30px] py-[23px]">CheckOut</p>
 
         <div className="flex flex-row gap-x-2 px-[54px] py-[25px]">
           <Image

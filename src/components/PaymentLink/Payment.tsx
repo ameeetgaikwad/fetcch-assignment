@@ -37,7 +37,7 @@ function Payment() {
               width={24}
               height={24}
             />
-            <p className="font-semibold text-base">Create Payment Link</p>
+            <p className="font-semibold text-xl">Create Payment Link</p>
           </div>
           <div className="p-[20px]">
             <button className="bg-gradient-to-b from-[#6A8BFF] to-[#3461FF] text-white rounded-lg w-[99px] h-[32px]">
@@ -69,7 +69,7 @@ function Payment() {
                     />
                   ))}
                   <div className="text-semibold font-2xl flex flex-row justify-center">
-                    <button className="bg-[#EBF0FF] text-[#3461FF] text-xs font-semibold rounded-3xl border-2 border-[#3461FF] h-[24px] w-[148px] py-[5px] flex flex-row items-center justify-center">
+                    <button className="bg-[#EBF0FF] text-[#3461FF] text-xs font-semibold rounded-3xl border-[0.83px] border-[#3461FF] h-[24px] w-[148px] py-[5px] flex flex-row items-center justify-center">
                       Add new Product +
                     </button>
                   </div>
@@ -80,7 +80,7 @@ function Payment() {
               <Accordion
                 type="single"
                 collapsible
-                className="w-full flex flex-col gap-y-5"
+                className="w-full flex flex-col"
               >
                 {addons.map((addon, index) => (
                   <AccordionComponent title={addon.title} />
