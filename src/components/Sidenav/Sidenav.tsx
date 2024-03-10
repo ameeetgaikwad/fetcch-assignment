@@ -3,50 +3,14 @@ import classNames from "classnames";
 import { Badge } from "../ui/badge";
 import { useState } from "react";
 import { Input } from "../ui/input";
-interface NavLinks {
-  title: string;
-  icon: string;
-  commingSoon?: boolean;
-}
-
+import { sideNavLinks } from "@/utils/constants";
 function Sidenav() {
   const [active, setActive] = useState("Payment links");
-  const sideNavLinks: Array<NavLinks> = [
-    {
-      title: "Home",
-      icon: "/icons/Checkout/home.svg",
-    },
-    {
-      title: "Payments",
-      icon: "/icons/Checkout/payments.svg",
-    },
-    {
-      title: "Payment links",
-      icon: "/icons/Checkout/paymentsLink.svg",
-    },
-    {
-      title: "Billing",
-      icon: "/icons/Checkout/billing.svg",
-      commingSoon: true,
-    },
-    {
-      title: "Invoices",
-      icon: "/icons/Checkout/invoices.svg",
-      commingSoon: true,
-    },
-    {
-      title: "Developer",
-      icon: "/icons/Checkout/developer.svg",
-    },
-    {
-      title: "Settings",
-      icon: "/icons/Checkout/settings.svg",
-    },
-  ];
+
   return (
     <>
-      <div className="h-[90%] mx-[12px] w-[220px] pt-[12px] flex flex-col justify-between">
-        <div>
+      <div className="h-full mx-[12px] w-[220px] pt-[12px] flex flex-col justify-between">
+        <div className="flex flex-col gap-y-[24px]">
           <div className="relative">
             <Input
               className="bg-[#F1F1F1] focus:border-0 rounded-xl pl-8 h-[40px] w-[236px]"
@@ -99,13 +63,26 @@ function Sidenav() {
           </div>
         </div>
 
-        <div className="mb-4">
+        <div className=" flex flex-row justify-between bg-white rounded-lg w-[236px] h-14">
           <Image
             src={"/icons/Checkout/profile.svg"}
             alt="profile"
             width={38}
             height={38}
           />
+
+          <div className="flex flex-col justify-center">
+            <p className="text-sm">Shivam</p>
+            <p className="text-[10px]">Shivamgmahale@xyz.com</p>
+          </div>
+          <button>
+            <Image
+              src={"/icons/Checkout/menu.svg"}
+              alt="menu"
+              width={16}
+              height={16}
+            />
+          </button>
         </div>
       </div>
     </>
