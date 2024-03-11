@@ -8,6 +8,7 @@ import { Accordion } from "@/components/ui/accordion";
 import { RadioGroup } from "@/components/ui/radio-group";
 import AccordionComponent from "@/components/Accordion/Accordion";
 import Confirmation from "../Confirmation/Confirmation";
+import Preview from "../Preview/Preview";
 
 enum PageEnum {
   BeforePayment = "BeforePayment",
@@ -19,7 +20,7 @@ enum LinkEnum {
 }
 
 function Payment() {
-  const [showPreview, setShowPreview] = useState(false);
+  const [showPreview, setShowPreview] = useState(true);
   const [pageType, setPageType] = useState<string>(PageEnum.BeforePayment);
   const [link, setLink] = useState<string>(LinkEnum.Product);
 
@@ -30,7 +31,7 @@ function Payment() {
     <>
       <div className="flex flex-col h-screen w-full bg-white mx-[12px] mt-[12px] mb-[32px] border-2 rounded-[20px] border-[#EBEBEB] overflow-y-hidden">
         <div className="flex flex-row justify-between h-[72px] border-b-2 border-[#EBEBEB]">
-          <div className="flex flex-row items-center px-[24px] py-[20px] gap-x-2">
+          <div className="flex flex-row items-center px-[24px] py-[20px]">
             <Image
               src={"/icons/Checkout/PaymentLink/cross.svg"}
               alt="cross"
@@ -40,12 +41,12 @@ function Payment() {
             <p className="font-semibold text-xl">Create Payment Link</p>
           </div>
           <div className="p-[20px]">
-            <button className="bg-gradient-to-b from-[#6A8BFF] to-[#3461FF] text-white rounded-lg w-[99px] h-[32px]">
+            <button className="bg-gradient-to-b from-[#6A8BFF] to-[#3461FF] text-white rounded-lg w-[99px] h-[32px] text-sm font-normal">
               Create Link
             </button>
           </div>
         </div>
-        <div className="m-8 flex flex-row justify-center">
+        <div className="m-8 flex flex-row justify-center gap-x-4">
           <div className="flex flex-col gap-y-5">
             <div className="flex flex-col gap-y-4">
               <div>
@@ -96,13 +97,20 @@ function Payment() {
               </div>
             )}
           </div>
-          <div>
-            {showPreview ? (
-              <div>
-                <button>Show Preview</button>
-              </div>
+          <div className="">
+            {!showPreview ? (
+              <button>
+                <p>Show Preview</p>
+
+                <Image
+                  src={"/icons/Preview/hide.svg"}
+                  alt="hide"
+                  width={100}
+                  height={200}
+                />
+              </button>
             ) : (
-              <div></div>
+              <Preview />
             )}
           </div>
         </div>

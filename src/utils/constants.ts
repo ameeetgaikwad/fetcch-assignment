@@ -1,3 +1,6 @@
+import { time } from "console";
+import { title } from "process";
+
 interface NavLinks {
   title: string;
   icon: string;
@@ -17,8 +20,14 @@ interface Addons {
   title: string;
 }
 
-interface options {
+interface Options {
   title: string;
+}
+
+interface Preview {
+  title: string;
+  icon: string;
+  price: string;
 }
 
 export const sideNavLinks: Array<NavLinks> = [
@@ -78,9 +87,22 @@ export const addons: Array<Addons> = [
   { title: "Advanced" },
 ];
 
-export const options: Array<options> = [
+export const options: Array<Options> = [
   { title: "Collect name" },
   { title: "Collect email" },
   { title: "Collect customer address" },
   { title: "Add a custom field" },
+];
+
+export const previewItems: Array<Preview> = [
+  {
+    title: "Landing Page",
+    icon: "/icons/Preview/one.svg",
+    price: "$499.00",
+  },
+  {
+    title: "UX Consultancy",
+    icon: "/icons/Preview/two.svg",
+    price: "$900.00",
+  },
 ];

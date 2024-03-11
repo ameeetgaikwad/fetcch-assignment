@@ -10,7 +10,7 @@ function Options() {
               <Checkbox id="terms" className="" />
               <label
                 htmlFor="terms"
-                className="text-base font-semibold leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-[#6A7385] pl-2"
+                className="text-base font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-[#6A7385] pl-2"
               >
                 {option.title}
               </label>
