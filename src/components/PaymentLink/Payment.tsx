@@ -38,7 +38,7 @@ function Payment() {
               width={24}
               height={24}
             />
-            <p className="font-semibold text-lg sm:text-xl">
+            <p className="font-semibold text-md sm:text-xl">
               Create Payment Link
             </p>
           </div>
