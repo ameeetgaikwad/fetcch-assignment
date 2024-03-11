@@ -29,7 +29,7 @@ function Payment() {
   }
   return (
     <>
-      <div className="flex flex-col h-screen w-full bg-white mx-[12px] mt-[12px] mb-[32px] border-2 rounded-[20px] border-[#EBEBEB] overflow-y-hidden">
+      <div className="flex flex-col h-[96%] w-[97%] md:w-[85%] bg-white mx-[12px] mt-[12px] mb-[32px] border-2 rounded-[20px] border-[#EBEBEB]">
         <div className="flex flex-row justify-between h-[72px] border-b-2 border-[#EBEBEB]">
           <div className="flex flex-row items-center px-[24px] py-[20px]">
             <Image
@@ -46,7 +46,7 @@ function Payment() {
             </button>
           </div>
         </div>
-        <div className="m-8 flex flex-row justify-center gap-x-4">
+        <div className="m-8 flex flex-row justify-center 2xl:justify-between gap-x-4">
           <div className="flex flex-col gap-y-5">
             <div className="flex flex-col gap-y-4">
               <div>
@@ -97,7 +97,7 @@ function Payment() {
               </div>
             )}
           </div>
-          <div className="">
+          <div className="pb-0 mb-0 hidden xl:flex">
             {!showPreview ? (
               <button>
                 <p>Show Preview</p>

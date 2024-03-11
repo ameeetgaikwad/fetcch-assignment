@@ -4,7 +4,7 @@ import Sidenav from "@/components/Sidenav/Sidenav";
 function Home() {
   return (
     <>
-      <div className="bg-[#F9F9F9] h-screen flex flex-row">
+      <div className="bg-[#F9F9F9] h-[992px] flex flex-row">
         <Sidenav />
         <Payment />
       </div>

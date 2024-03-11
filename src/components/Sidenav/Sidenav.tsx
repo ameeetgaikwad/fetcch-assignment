@@ -9,11 +9,11 @@ function Sidenav() {
 
   return (
     <>
-      <div className="h-full mx-[12px] w-[220px] pt-[12px] flex flex-col justify-between">
+      <div className="h-[96%] mx-[12px] w-[25%] lg:w-[22%] xl:w-[16%] mt-[12px] hidden flex-col mb-[32px] justify-between md:flex">
         <div className="flex flex-col gap-y-[24px]">
           <div className="relative">
             <Input
-              className="bg-[#F1F1F1] focus:border-0 rounded-xl pl-8 h-[40px] w-[236px]"
+              className="bg-[#F1F1F1] focus:border-0 rounded-xl pl-8 h-[40px] w-[100%]"
               placeholder="Search"
             />
             <Image
@@ -23,7 +23,7 @@ function Sidenav() {
               height={16}
               className="absolute top-[30%] left-2"
             />
-            <p className="bg-white w-[24px] h-[24px] flex flex-row justify-center absolute top-[20%] right-0 font-extralight">
+            <p className="bg-white w-[24px] h-[24px] flex flex-row justify-center absolute top-[20%] right-2 font-extralight">
               /
             </p>
           </div>
@@ -32,7 +32,7 @@ function Sidenav() {
               <div
                 key={index}
                 className={classNames({
-                  "flex flex-row gap-x-2 h-[40px] w-[220px] items-center px-3":
+                  "flex flex-row gap-x-2 h-[40px] w-[98%] items-center px-3":
                     true,
                   "text-[#3461ff] border-2 border-[#BECCFF] rounded-lg":
                     active == link.title,
@@ -53,8 +53,9 @@ function Sidenav() {
                 >
                   {link.title}
                 </button>
+
                 {link.commingSoon && (
-                  <Badge className="bg-gradient-to-b from-[#85A0FF] to-[#577CFF] rounded-xl h-6 font-normal">
+                  <Badge className="bg-gradient-to-b from-[#85A0FF] to-[#577CFF] rounded-xl h-7 font-normal xl:w-[50%] ">
                     comming soon
                   </Badge>
                 )}

@@ -4,8 +4,8 @@ import { it } from "node:test";
 function Preview() {
   return (
     <>
-      <div className="w-[685px] h-[756px] bg-[#F5F5F5] rounded-[10.55px] border-[0.96px] border-[#D0D0D0] flex justify-center items-center">
-        <div className="bg-white w-[660px] h-[447.3px] rounded-b-[7.14px] flex flex-col items-center justify-center shadow-3xl">
+      <div className="w-[100%] h-[756px] bg-[#F5F5F5] rounded-[10.55px] border-[0.96px] border-[#D0D0D0] flex justify-center items-center">
+        <div className="bg-white w-[98%] h-[447.3px] rounded-b-[7.14px] flex flex-col items-center justify-center shadow-3xl">
           <div>
             <Image
               src={"/icons/Preview/navbar.svg"}
@@ -16,7 +16,7 @@ function Preview() {
             />
           </div>
 
-          <div className="bg-[#F8F8F8] rounded-[3.92px] w-[655.07px] h-[415.44px] flex flex-row gap-x-8">
+          <div className="bg-[#F8F8F8] rounded-[3.92px] w-[98%] h-[415.44px] flex flex-row gap-x-8 justify-between">
             <div className="flex flex-col mt-[42px] ml-[56.7px] gap-x-16">
               <div className="flex flex-row mb-[9.82px]">
                 <div className="flex flex-row justify-center items-center">
@@ -29,7 +29,7 @@ function Preview() {
                   />
                 </div>
 
-                <div className="flex flex-row w-[83.02px] h-[21.43px] bg-white justify-center items-center rounded-[18.75px]">
+                <div className="flex flex-row w-[30%] h-[21.43px] bg-white justify-center items-center rounded-[18.75px]">
                   <Image
                     src={"/icons/Preview/profile.svg"}
                     alt="profile"
@@ -53,7 +53,7 @@ function Preview() {
                   Items
                 </p>
                 {previewItems.map((item, index) => (
-                  <div className="flex flex-row justify-between w-[266.55px]">
+                  <div className="flex flex-row justify-between w-[100%]">
                     <div className="flex flex-row justify-center items-center gap-x-2">
                       <Image
                         src={item.icon}
@@ -75,7 +75,7 @@ function Preview() {
                 alt="payment"
                 width={2}
                 height={2}
-                className="w-[326.82px] h-[420.58px]"
+                className="w-[100%] h-[420.58px]"
               />
             </div>
           </div>
