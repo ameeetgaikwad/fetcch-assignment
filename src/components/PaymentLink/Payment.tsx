@@ -46,13 +46,7 @@ function Payment() {
             </button>
           </div>
         </div>
-        <div
-          className={`m-8 flex flex-row justify-center 2xl:justify-between gap-x-4 ${
-            showPreview === false
-              ? "translate-x-[30%] transition duration-500 ease-in-out"
-              : "transition duration-500 ease-in-out"
-          }`}
-        >
+        <div className={`m-8 flex flex-row justify-center gap-x-4`}>
           <div className="flex flex-col gap-y-5">
             <div className="flex flex-col gap-y-4">
               <div>
@@ -103,12 +97,31 @@ function Payment() {
               </div>
             )}
           </div>
-          <div className="pb-0 mb-0 hidden xl:flex">
-            <Preview
-              link={link}
-              setShowPreview={setShowPreview}
-              showPreview={showPreview}
-            />
+          <div className="pb-0 mb-0 hidden xl:flex relative">
+            {!showPreview ? (
+              <button
+                className={`bg-white relative left-[150%] flex flex-row font-semibold text-[10px] w-[118px] h-[30px] justify-center items-center rounded-[8px] border-[1px] border[#CDCDCD]`}
+                onClick={() => {
+                  setShowPreview(!showPreview);
+                  console.log(showPreview);
+                }}
+              >
+                <p>{"Show Preview"}</p>
+
+                <Image
+                  src={"/icons/Preview/hide.svg"}
+                  alt="hide"
+                  width={12}
+                  height={12}
+                />
+              </button>
+            ) : (
+              <Preview
+                link={link}
+                setShowPreview={setShowPreview}
+                showPreview={showPreview}
+              />
+            )}
           </div>
         </div>
       </div>

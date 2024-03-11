@@ -16,9 +16,7 @@ function Preview({
     <>
       <div
         className={`w-[100%] h-[756px] bg-[#F5F5F5] rounded-[10.55px] border-[0.96px] border-[#D0D0D0] flex flex-col justify-center items-center ${
-          showPreview === false
-            ? "translate-x-[60%] transition duration-500 ease-in-out"
-            : "transition duration-500 ease-in-out"
+          showPreview === false ? "hidden " : ""
         }`}
       >
         <button
