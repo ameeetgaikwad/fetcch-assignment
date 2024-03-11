@@ -11,7 +11,9 @@ function AccordionComponent({ title }: { title: string }) {
     <>
       <AccordionItem
         value={title}
-        className={`w-[400px] ${title === "Options" && "mb-5"}`}
+        className={` sm:justify-start sm:w-[400px] ${
+          title === "Options" && "mb-5"
+        }`}
       >
         <AccordionTrigger className="text-2xl font-semibold">
           {title}

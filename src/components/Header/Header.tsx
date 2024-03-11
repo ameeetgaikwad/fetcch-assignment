@@ -53,10 +53,12 @@ function Header() {
             </Popover>
           </div>
 
-          <p className="text-xl font-semibold px-[30px] py-[23px]">CheckOut</p>
+          <p className="text-lg sm:text-xl font-semibold px-[5px] md:px-[30px] py-[23px]">
+            CheckOut
+          </p>
         </div>
 
-        <div className="flex flex-row gap-x-2 px-[54px] py-[25px]">
+        <div className="hidden sm:flex flex-row gap-x-2 px-[54px] py-[25px]">
           <Image
             src={"/icons/Header/helpSupport.svg"}
             alt="help&support"
