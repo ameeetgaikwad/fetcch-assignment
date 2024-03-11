@@ -22,11 +22,11 @@ function Confirmation() {
             Accept terms and conditions
           </label>
         </div>
-        <div className="border-2 border-[#D2D2D2] rounded-lg relative left-[52px] w-[330px]">
+        <div className="border-2 border-[#D2D2D2] rounded-lg relative left-[52px] w-[270px] sm:w-[330px]">
           <textarea
             placeholder="include details, such as delivery date estimates
 or any other order related information"
-            className="h-[74px] w-[325px] focus:border-0 focus:outline-none resize-none pl-3 pt-2 text-sm"
+            className="h-[74px] w-[250px] sm:w-[325px] focus:border-0 focus:outline-none resize-none pl-3 pt-2 text-sm"
           />
         </div>
         <div className="flex items-center space-x-2">
