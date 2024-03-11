@@ -10,12 +10,12 @@ import { Checkbox } from "@/components/ui/checkbox";
 function Advanced() {
   return (
     <>
-      <div className="">
+      <div className="pt-5">
         <Select>
           <p className="text-[#6A7385] text-sm font-medium">
             Label for Call-To-Action
           </p>
-          <SelectTrigger className="w-[400px]">
+          <SelectTrigger className="w-[290px] sm:w-[400px]">
             <SelectValue placeholder="Pay" />
           </SelectTrigger>
           <SelectContent>
