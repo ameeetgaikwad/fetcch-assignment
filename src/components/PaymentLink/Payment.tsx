@@ -14,22 +14,22 @@ enum PageEnum {
   BeforePayment = "BeforePayment",
   AfterPayment = "AfterPayment",
 }
-enum LinkEnum {
+export enum LinkEnum {
   Product = "Products or Subscriptions",
   Customer = "Customers choose what to pay",
 }
 
 function Payment() {
-  const [showPreview, setShowPreview] = useState(true);
+  const [showPreview, setShowPreview] = useState<boolean>(true);
   const [pageType, setPageType] = useState<string>(PageEnum.BeforePayment);
   const [link, setLink] = useState<string>(LinkEnum.Product);
-
+  console.log(showPreview);
   function handleLinkChange(e: React.ChangeEvent<HTMLInputElement>) {
     setLink(e.target.value);
   }
   return (
     <>
-      <div className="flex flex-col h-[96%] w-[97%] md:w-[85%] bg-white mx-[12px] mt-[12px] mb-[32px] border-2 rounded-[20px] border-[#EBEBEB]">
+      <div className="flex flex-col h-[96%] w-[97%] md:w-[85%] bg-white mx-[12px] mt-[12px] mb-[32px] border-2 rounded-[20px] border-[#EBEBEB] overflow-x-hidden">
         <div className="flex flex-row justify-between h-[72px] border-b-2 border-[#EBEBEB]">
           <div className="flex flex-row items-center px-[24px] py-[20px]">
             <Image
@@ -46,7 +46,13 @@ function Payment() {
             </button>
           </div>
         </div>
-        <div className="m-8 flex flex-row justify-center 2xl:justify-between gap-x-4">
+        <div
+          className={`m-8 flex flex-row justify-center 2xl:justify-between gap-x-4 ${
+            showPreview === false
+              ? "translate-x-[30%] transition duration-500 ease-in-out"
+              : "transition duration-500 ease-in-out"
+          }`}
+        >
           <div className="flex flex-col gap-y-5">
             <div className="flex flex-col gap-y-4">
               <div>
@@ -90,7 +96,7 @@ function Payment() {
             )}
             {pageType == PageEnum.AfterPayment && (
               <div>
-                <p className="font-semibold text-2xl">
+                <p className="font-semibold text-2xl mb-3">
                   Show confirmation page.
                 </p>
                 <Confirmation />
@@ -98,20 +104,11 @@ function Payment() {
             )}
           </div>
           <div className="pb-0 mb-0 hidden xl:flex">
-            {!showPreview ? (
-              <button>
-                <p>Show Preview</p>
-
-                <Image
-                  src={"/icons/Preview/hide.svg"}
-                  alt="hide"
-                  width={100}
-                  height={200}
-                />
-              </button>
-            ) : (
-              <Preview />
-            )}
+            <Preview
+              link={link}
+              setShowPreview={setShowPreview}
+              showPreview={showPreview}
+            />
           </div>
         </div>
       </div>
