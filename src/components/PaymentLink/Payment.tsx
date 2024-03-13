@@ -62,7 +62,7 @@ function Payment() {
             <Toogle setPageType={setPageType} pageType={pageType} />
             {link === LinkEnum.Product &&
               pageType == PageEnum.BeforePayment && (
-                <div className="w-[100%] flex flex-col gap-y-4 items-center sm:items-start">
+                <div className="w-[100%] flex flex-col gap-y-4 items-center sm:items-center">
                   <p className="font-semibold text-2xl flex">Product</p>
 
                   {products.map((product, index) => (
@@ -102,7 +102,7 @@ function Payment() {
               </div>
             )}
           </div>
-          <div className="pb-0 mb-0 hidden xl:flex relative">
+          <div className="pb-0 mb-0 hidden m1:flex relative">
             {!showPreview ? (
               <button
                 className={`bg-white relative left-[150%] flex flex-row font-semibold text-[10px] w-[118px] h-[30px] justify-center items-center rounded-[8px] border-[1px] border[#CDCDCD]`}

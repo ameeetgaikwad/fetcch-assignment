@@ -77,6 +77,14 @@ const config = {
           "10px 30px 35px -5px rgb(0 0 0 / 0.1), 0px 20px 20px -5px rgb(0 0 0 / 0.1)",
       },
     },
+    screens: {
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1536px",
+      m1: "1250px",
+    },
   },
   plugins: [require("tailwindcss-animate")],
 } satisfies Config;

@@ -52,8 +52,8 @@ function Preview({
             />
           </div>
 
-          <div className="bg-[#F8F8F8] rounded-[3.92px] w-[98.5%] h-[415px] flex flex-row gap-x-8 justify-between">
-            <div className="flex flex-col mt-[42px] ml-[56.7px] gap-x-16">
+          <div className="bg-[#F8F8F8] rounded-[3.92px] w-[98.5%] h-[415px] flex flex-row gap-x-3 xl:gap-x-8 justify-between">
+            <div className="flex flex-col mt-[42px] ml-[46px] xl:ml-[56.7px] gap-x-16 w-[30%] xl:w-[30%]">
               <div className="flex flex-row mb-[9.82px]">
                 <div className="flex flex-row justify-center items-center">
                   <Image
@@ -77,27 +77,30 @@ function Preview({
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col">
-                <p className="text-[10.72px] font-medium text-[#A2A2A2] mb-[7px]">
-                  Pay
-                </p>
-                {link === LinkEnum.Product ? (
-                  <p className="text-[22.32px] font-[510px] mb-[8.72px] ">
-                    $1399
+              <div className="flex flex-col w-[100%]">
+                <div>
+                  <p className="text-[10.72px] font-medium text-[#A2A2A2] mb-[7px]">
+                    Pay
                   </p>
-                ) : (
-                  <Input placeholder="$0.00" />
-                )}
+                  {link === LinkEnum.Product ? (
+                    <p className="text-[22.32px] font-[510px] mb-[8.72px] ">
+                      $1399
+                    </p>
+                  ) : (
+                    <Input placeholder="$0.00" />
+                  )}
+                  {link === LinkEnum.Product && (
+                    <p className="text-[10.72px] font-medium text-[#A2A2A2] mb-[10.65px]">
+                      Items
+                    </p>
+                  )}
+                </div>
+
                 {link === LinkEnum.Product && (
-                  <p className="text-[10.72px] font-medium text-[#A2A2A2] mb-[10.65px]">
-                    Items
-                  </p>
-                )}
-                {link === LinkEnum.Product && (
-                  <div>
+                  <div className="w-[100%]">
                     {previewItems.map((item, index) => (
-                      <div className="flex flex-row justify-between w-[100%]">
-                        <div className="flex flex-row justify-center items-center gap-x-2">
+                      <div className="flex flex-row justify-between w-[100%] gap-x-2">
+                        <div className="flex flex-row justify-center items-center gap-x-2 w-[100%]">
                           <Image
                             src={item.icon}
                             alt="numbering"
@@ -105,26 +108,29 @@ function Preview({
                             height={25}
                             className="w-[18px] h-[18px]"
                           />
-                          <p className="font-medium text-[8.93px]">
-                            {item.title}
-                          </p>
+
+                          <div className="flex flex-row justify-between w-[100%] space-x-1.5">
+                            <p className="font-medium text-[8.93px] flex flex-wrap">
+                              {item.title}
+                            </p>
+                            <p className="font-medium text-[8.93px]">
+                              {item.price}
+                            </p>
+                          </div>
                         </div>
-                        <p className="font-medium text-[8.93px]">
-                          {item.price}
-                        </p>
                       </div>
                     ))}
                   </div>
                 )}
               </div>
             </div>
-            <div>
+            <div className="flex flex-row justify-end">
               <Image
                 src={"/icons/Preview/paymentdetails.svg"}
                 alt="payment"
                 width={2}
                 height={2}
-                className="w-[100%] h-[420.58px]"
+                className="w-[100%] h-[100%] xl:w-[100%] xl:h-[100%] bg-cover"
               />
             </div>
           </div>
