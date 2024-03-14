@@ -23,7 +23,6 @@ function Payment() {
   const [showPreview, setShowPreview] = useState<boolean>(true);
   const [pageType, setPageType] = useState<string>(PageEnum.BeforePayment);
   const [link, setLink] = useState<string>(LinkEnum.Product);
-  console.log(showPreview);
   function handleLinkChange(e: React.ChangeEvent<HTMLInputElement>) {
     setLink(e.target.value);
   }
@@ -108,7 +107,6 @@ function Payment() {
                 className={`bg-white relative left-[150%] flex flex-row font-semibold text-[10px] w-[118px] h-[30px] justify-center items-center rounded-[8px] border-[1px] border[#CDCDCD]`}
                 onClick={() => {
                   setShowPreview(!showPreview);
-                  console.log(showPreview);
                 }}
               >
                 <p>{"Show Preview"}</p>

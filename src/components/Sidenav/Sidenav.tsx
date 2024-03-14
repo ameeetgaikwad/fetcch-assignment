@@ -56,7 +56,7 @@ function Sidenav() {
 
                 {link.commingSoon && (
                   <Badge className="bg-gradient-to-b from-[#85A0FF] to-[#577CFF] rounded-xl h-7 font-normal xl:w-[50%] ">
-                    comming soon
+                    coming soon
                   </Badge>
                 )}
               </div>

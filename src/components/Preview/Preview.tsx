@@ -27,7 +27,6 @@ function Preview({
           }`}
           onClick={() => {
             setShowPreview(!showPreview);
-            console.log(showPreview);
           }}
         >
           <p>{showPreview === true ? "Hide Preview" : "Show Preview"}</p>
